@@ -1,257 +1,45 @@
-web サイトにこのメモアップしてみるか
-たとえば限られた時間で2つの問題があって
-一個のことを100%やろうとして時間切れになるかは
-2つのことを80% 80%にしたほうがいい
-3 4 攻めスターかたnebenjob始められる
-aikeはpraktikumしなかった
-Integer　とか　DoubleはNumberのサブクラス
-でもAlphabet使って大学で学んでいるの楽しいな
-言い訳ならいくらでも作れる
-あの眼鏡みたいにタイピング早くなりたいな!!
-beim Youtube wenn k druckt stop
-f druckt fullscreen
-
-Eclipse Indent -> Source => Format
-
-Folie は 7回は位チェックする　で　分からないところはチェック
-あとはひたすら　wikipedia か youtube か 英語のページチェック!!
-
-おれはできる！！！あたまいいんだ！！一年半でドイツの大学生なったし！！！
-
-((Wort))
-
-kompatibel:互換性のある
-
-invariants:不変の
-
-covariant:共変の
-
-erheblich:多大の かなりの
-unerheblich:的外れの
-
-abwärts:下へ
-
-auswerten:nutzlich machen,im Hinblich auf seine Aussagekraft prüfen und aufbereiten 価値を評価する
-
-gemäß:nach,zufolge,demsprechend ~によれば　~に応じて
-
-aufbereiten:データを処理する
-
-Verzweigung:枝分かれ
-
-Komplexität:複雑 計算量
-
-sequenziell:連続的な
-
-traversieren:縦走する
-
-aufweisen:特性を示す
-
-auszeichnen:目立たせる
-
-Operand:演算の対象になる値や変数のこと
-
-Operator:演算に使う記号のこと
-
-wartbar:維持できる
-
-
-
-((Generics))
-
-型は格納するデータを制約する
-クラス定義の仕方
-public class Pocket<E>{
-	private E data;
-	public void put(E d){this.data = d;}
-	public E get(){return this.data;}
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>7Palm</title>
 	
-}
+	<link rel="stylesheet" href="7palm.css">
+</head>
 
-でコイツを利用する時は
-Pocket<String> p = new Pocket<String>();
-p.put("1129");
-String s = p.get(); 
-System.out.println(s);
+<body>
 
+<div id="container">
 
+<div id="header">
+<h1><a href="index.html"><img src="7palm.png" height="100" width="120"></a></h1>
+</div>
 
-<E extends Number> なら　Numberとそのサブクラスをぶちこめる
-&でつなげば複数のクラスok <E extends A & B & C>
-<E extends A<E>>もok
+<div id="menu">
 
-<? super Number>
-Numberのスーパークラスなら何ぶちこんでもいい
+<a href="">Apps</a>
+<a href="">Me</a>
+<a href="">News</a>
+<a href="blog1.html">Blog</a>
 
-interface Comparator<T>
+</div>
 
-Invariantz(不変数の)
-<T> nur dies Type möglich
+<div id="contents">
 
-Bivarianz(2変数の)
-<?> kann alle Typ möglich
+<div><img src="icon.png" height="90" width="100"></div>
+</div><!--#contents-->
 
-Covarianz(共変数の)
-<? extends Number>
-alle Typ, die Subklass von Number sind möglich.
+<div id="sidebar">
+</div><!--#sidebar-->
 
-Contravarianz(逆転変数の)
-<? super Hero>
-alle Typ, die Oberklasse von Hero sind möglich.
+<div id="main">
 
-Lesen heisst get(), schreiben heisst set()
+</div><!--#main-->
 
+<div id="footer">Copyright Yuhei.com</div>
 
-((Enum))
+</div><!--#container-->
 
-Enum are lists of constants.When you need a predefined list of values which do not represent some kind of numeric or textual data, you should use an enum.
- 
-int ordinal()
-列挙定数の位置を返す
+</body>
 
-values()は列挙子を順番に並べた配列を返す
-
-((Listiterator))
-
-next() verweist nicht das vor mir befindene Datei, sondern das Datei, das neben dies Datei stehet. und der Zeiger geht nach rechts.
-
-previous() verweist das direkt vor stehende Datei.und der Zeiger geht nach links.
-
-hasNext() nichit das vor mir befindene Date sonfern, wenn das neben befindene Datei nicht null ist, gibt true zurück.
-
-hasPrevious() wenn das direkt vor stehende Datei nicht null ist, gibt true zurück.
-
-((Bäume))
-
-gutes Link 
-https://www.youtube.com/watch?v=xfhfRAccL2w
-
-how to make
-http://www.newthinktank.com/2013/03/binary-tree-in-java/
-
-Ein Knoten ohne Kinder heißt Blatt.
-
-Ein Pfad in einem Baum ist eine Folge von unterschiedlichen Knoten, in der die aufeinander folgenden Knoten durch Kanten miteinander verbunden sind.
-
-Unter dem Niveau eines Knotens versteht man die Länge des Pfades von  der Wurzel zu diesem Knoten.
-
-Die Höhe eines Baumes entspricht dem größtem Niveau eines Blattes plus 1.
-
-Wenn die Kinder jedes Knotens in einer bestimmten Reihenfolge geordnet sind, wird ein solcher baum als geordneter Baum bezeichnet.
-
-Binär Baum ist ein geordneter Baum, bai dem jeder Knoten maximal zwei Kinder hat.
-
-Pre-Order Durchlauf
-zuerst wurzel, dann auf der linken Seite Knoten und den linken Kindknoten dann den rechten Kindknoten.
-V-l-r
-
-Post-Order Durchlauf
-l-r-V
-
-In-Order Durchlauf
-l-V-r
-Aim for the smallest value first.
-Start at 1st LeftChild.
-
-Why use trees??
--> You can search, and insert/delete items quickly in a tree.
-
-
-
-((Visitor))
-
-gutes Link
-http://www.techscore.com/tech/DesignPattern/Visitor.html/
-
-The pattern should be used when you have distinct and unrelated operations to perform across a structure of objects.
-This avoids adding in code throughout your object structure that is better kept separate, so it encourages cleaner code.
-
-Eine Klasse, die man nicht so ändern möchte, hat accept.Accept bekommt Visitor und Visitor bekommt auch Accepter(this).Das heisst; Accepter bekommt Visitor und gleichzeitig auch gibt sich selbst.Dann Visitor nimmt Operation statt Accepter.Deswegen kann man viel Operation ausführen ohne Elementklasse ändern.
-
-((Collections))
-
-boolean disjoint(Collection<?> c1, Collection<?> c2)
-Wenn 2 Collection keine gleiche Elemente haben, wird True zurückgegeben.
-
-
-((Set))
-
-The java util.Set interface is a subtype of the java.util.Collection interface.
-It represents set of objects, meaning each element can only exists once in a Set.
-
-
-((Map))
-
-Set<K> KeySet() - Gibt ein Key, das von dies Map enthalten ist, zurück.
-Also alle Key sind zurück.
-
-Set<Map.Entry<K,V>> entrySet() - Gibt Set von diesem Map zurück.
-
-((Map.Entry))
-
-The Map.Entry interface enables you to work with a map entry.
-The entrySet() method declared by the Map interface returns a Set contains the map entries.Each of these set elements is a Map.Entry object.
-
-Map.Entry is a key and its value combined into one class. This allows you to iterate over Map.entrySet().
-
-((enum SourceVersion))
-
-Dies Enum enthält Keyword von Java.
-package ist javax.lang.model.SourceVersion.
-z.B. for char while …..
-
-boolean isKeyword(CharSequence s) - Returns whether or not name is a syntactically valid identifier.
-
-boolean isName(CharSequence name) - Returns whether or not name is a syntactically valid.Unlike isIdentifer, this method retuns false for keywords and lliterals.
-
-
-((CharSequence))
-
-CharSequence is a interface, and String is an implementation of this interface.
-
-
-((Identifer))
-
-An identifier is a name given to a package, class, interface,method,or variable.It allows a programmer to refer to the item from other places in the program.
-Also das ist einfach ein Name.
-
-
-((Literal))
-
-Java literals are syntactic representations of boolean, character, numeric, or string data.
-
-((space))
-
-\\s bedeutet space.
-
-((trim))
-
-public String trim() - This method returns a copy of the string, with leading and trailing whitespace omitted.
-
-((substring))
-
-This method has two variants and returns a new string that is a substring of this string.The substring begins with the character at the specified index and extends to the end of this string or up to end index -1 if second argument is given.
-
-Here is the syntax of this method.
-public String substring(int beginIndex)
-
-or 
-
-public String substring(int beginIndex, int endIndex)
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
+</html>
